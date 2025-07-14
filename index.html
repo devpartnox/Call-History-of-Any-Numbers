@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Call History of Any Number</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --success: #059669;
+      --bg: #f9fbfd;
+      --text: #1f2937;
+      --glass: rgba(255, 255, 255, 0.3);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Urbanist', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      padding: 90px 20px 40px;
+      background: linear-gradient(to bottom right, #1e40af, #3b82f6);
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      color: white;
+      position: relative;
+    }
+
+    .hero-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 4px solid white;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: auto;
+      opacity: 0.95;
+    }
+
+    .badges {
+      margin-top: 25px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .badge-pill {
+      background: white;
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 40px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .download-section {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .download-btn {
+      background: linear-gradient(to right, #10b981, #047857);
+      color: white;
+      font-size: 1.1rem;
+      padding: 14px 42px;
+      border-radius: 40px;
+      font-weight: 600;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+      transition: 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .playstore-badge img {
+      width: 180px;
+      margin-top: 10px;
+    }
+
+    .steps-section {
+      max-width: 1180px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .step-card {
+      background: white;
+      border-radius: 24px;
+      padding: 35px 25px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: 0.3s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .step-icon {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .step-title {
+      font-weight: 700;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .step-desc {
+      font-size: 0.95rem;
+      color: #4b5563;
+    }
+
+    .review-section {
+      background: linear-gradient(to bottom right, #f9fafb, #ffffff);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .review-section h3 {
+      font-weight: 700;
+      font-size: 1.6rem;
+      margin-bottom: 30px;
+    }
+
+    .review-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 10px;
+      scroll-behavior: smooth;
+    }
+
+    .review-box {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      background: white;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 25px;
+      width: 320px;
+    }
+
+    .stars {
+      color: #facc15;
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background: linear-gradient(to bottom right, #1e40af, #3b82f6);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+
+    .footer a {
+      color: #d1fae5;
+      margin: 0 8px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <img src="img/unnamed.webp" alt="App Logo" class="hero-logo">
+    <h1>Call History of Any Number</h1>
+    <div class="stars">★★★★☆ 4.6 (5000+ Reviews)</div>
+    <p>Instantly view call logs & history of any mobile number</p>
+    <div class="badges">
+      <div class="badge-pill"><i class="bi bi-shield-check"></i> Verified & Secure</div>
+      <div class="badge-pill"><i class="bi bi-star-fill"></i> 4.6 Star Rating</div>
+      <div class="badge-pill"><i class="bi bi-people-fill"></i> 5000+ Users</div>
+    </div>
+  </section>
+
+  <div class="download-section">
+    <a href="https://play.google.com/store/apps/details?id=tathastu.info.call.history.of.any.number" class="btn download-btn">Download Now</a>
+    <div class="playstore-badge">
+      <a href="https://play.google.com/store/apps/details?id=tathastu.info.call.history.of.any.number">
+        <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play">
+      </a>
+    </div>
+  </div>
+
+  <section class="steps-section">
+    <h3 class="text-center fw-bold mb-4">How It Works</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="bi bi-cloud-download"></i></div>
+          <div class="step-title">Step 1</div>
+          <div class="step-desc">Download and install the app on your phone.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="bi bi-telephone-inbound"></i></div>
+          <div class="step-title">Step 2</div>
+          <div class="step-desc">Enter the mobile number to get full call history.</div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="step-card">
+          <div class="step-icon"><i class="bi bi-clock-history"></i></div>
+          <div class="step-title">Step 3</div>
+          <div class="step-desc">See all incoming, outgoing & missed calls.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="review-section">
+    <h3>What Users Say</h3>
+    <div class="review-slider">
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“Bhai sach mein kaam karta hai! Number daala aur pura call history mil gaya.”</p>
+        <small>- Rahul S.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“Aise app ka hi toh wait tha! Simple aur fast kaam karta hai.”</p>
+        <small>- Kavita P.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“Mujhe laga ye app fake hoga, par sach mein kaam karta hai! Sirf number daala aur poora call record mil gaya – simple aur fast.”</p>
+        <small>- Deepak M.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“Doubt tha girlfriend pe, bas number daala aur saari call details saamne aa gayi. Thank you for this app!”</p>
+        <small>- Ankit R.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“I thought this app was fake, but it really works! Just put the number and see full call history. Very simple and fast.”</p>
+        <small>- Priya T.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“I had a doubt on someone. I entered the number and got all call details. This app is very helpful!”</p>
+        <small>- Aman K.</small>
+      </div>
+      <div class="review-box">
+        <div class="stars">★★★★★</div>
+        <p>“Very easy to use. Just enter any number and get call details in seconds. Great app!”</p>
+        <small>- Riya S.</small>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <h5>Call History of Any Number</h5>
+    <p class="mb-2">Made with ❤️ for users who value privacy and clarity</p>
+    <div>
+      <a href="index.html">Privacy Policy</a> |
+      <a href="index.html">Terms of Use</a>
+    </div>
+    <p class="mt-3">&copy; 2025 Developer's. All rights reserved.<br><a href="https://trendfold.com/"></a> Developed by TrendFold.</a> </p>
+  </footer>
+
+  <script>
+    // Auto scroll reviews
+    const slider = document.querySelector('.review-slider');
+    let scrollAmount = 0;
+    setInterval(() => {
+      scrollAmount += 340;
+      if (scrollAmount > slider.scrollWidth - slider.clientWidth) {
+        scrollAmount = 0;
+      }
+      slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 4000);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
