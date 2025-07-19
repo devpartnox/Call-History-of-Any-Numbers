@@ -82,22 +82,21 @@
     }
 
     .hero-cta {
-      margin-top: 35px;
+      margin-top: 30px;
     }
 
-.download-btn {
-  text-decoration: none; /* <-- This line ensures no underline */
-  color: white;
-  font-weight: 600;
-  background: linear-gradient(to right, #10b981, #059669);
-  padding: 16px 50px;
-  border-radius: 50px;
-  display: inline-block;
-  font-size: 1.2rem;
-  transition: transform 0.3s ease, background 0.3s ease;
-  animation: pulse 1.8s infinite;
-  margin-top: 30px;
-}
+    .download-btn {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      background: linear-gradient(to right, #10b981, #059669);
+      padding: 16px 50px;
+      border-radius: 50px;
+      display: inline-block;
+      font-size: 1.2rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+      animation: pulse 1.8s infinite;
+    }
 
     .download-btn:hover {
       transform: scale(1.05);
@@ -219,23 +218,23 @@
     <div class="stars">★★★★☆ 4.6 (5000+ Reviews)</div>
     <p>Instantly view call logs & history of any mobile number</p>
 
-    <div class="badges">
-      <div class="badge-pill"><i class="bi bi-shield-check"></i> Verified & Secure</div>
-      <div class="badge-pill"><i class="bi bi-star-fill"></i> 4.6 Star Rating</div>
-      <div class="badge-pill"><i class="bi bi-people-fill"></i> 5000+ Users</div>
-    </div>
-
-    <!-- ✅ CTA added directly inside hero -->
+    <!-- ✅ Buttons moved up -->
     <div class="hero-cta">
       <a href="https://play.google.com/store/apps/details?id=tathastu.info.call.history.of.any.number" class="download-btn" target="_blank">
         ⬇️ Download Now
       </a>
       <div class="playstore-badge">
         <a href="https://play.google.com/store/apps/details?id=tathastu.info.call.history.of.any.number" target="_blank">
-          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png"
-            alt="Get it on Google Play" />
+          <img src="https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png" alt="Get it on Google Play" />
         </a>
       </div>
+    </div>
+
+    <!-- ✅ Badges below -->
+    <div class="badges">
+      <div class="badge-pill"><i class="bi bi-shield-check"></i> Verified & Secure</div>
+      <div class="badge-pill"><i class="bi bi-star-fill"></i> 4.6 Star Rating</div>
+      <div class="badge-pill"><i class="bi bi-people-fill"></i> 5000+ Users</div>
     </div>
   </section>
 
@@ -266,46 +265,49 @@
     </div>
   </section>
 
-  <section class="review-section">
-    <h3>What Users Say</h3>
-    <div class="review-slider">
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“Bhai sach mein kaam karta hai! Number daala aur pura call history mil gaya.”</p>
-        <small>- Rahul S.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“Aise app ka hi toh wait tha! Simple aur fast kaam karta hai.”</p>
-        <small>- Kavita P.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“Mujhe laga ye app fake hoga, par sach mein kaam karta hai! Sirf number daala aur poora call record mil gaya – simple aur fast.”</p>
-        <small>- Deepak M.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“Doubt tha girlfriend pe, bas number daala aur saari call details saamne aa gayi. Thank you for this app!”</p>
-        <small>- Ankit R.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“I thought this app was fake, but it really works! Just put the number and see full call history. Very simple and fast.”</p>
-        <small>- Priya T.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“I had a doubt on someone. I entered the number and got all call details. This app is very helpful!”</p>
-        <small>- Aman K.</small>
-      </div>
-      <div class="review-box">
-        <div class="stars">★★★★★</div>
-        <p>“Very easy to use. Just enter any number and get call details in seconds. Great app!”</p>
-        <small>- Riya S.</small>
-      </div>
+ <section class="review-section">
+  <h3>What Users Say</h3>
+  <div class="review-slider">
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“Bhai sach mein kaam karta hai! Number daala aur pura call history mil gaya.”</p>
+      <small>- Rahul S.</small>
     </div>
-  </section>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“Aise app ka hi toh wait tha! Simple aur fast kaam karta hai.”</p>
+      <small>- Kavita P.</small>
+    </div>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“Mujhe laga ye app fake hoga, par sach mein kaam karta hai! Sirf number daala aur poora call record mil gaya – simple aur fast.”</p>
+      <small>- Deepak M.</small>
+    </div>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“Doubt tha girlfriend pe, bas number daala aur saari call details saamne aa gayi. Thank you for this app!”</p>
+      <small>- Ankit R.</small>
+    </div>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“I thought this app was fake, but it really works! Just put the number and see full call history. Very simple and fast.”</p>
+      <small>- Priya T.</small>
+    </div>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“I had a doubt on someone. I entered the number and got all call details. This app is very helpful!”</p>
+      <small>- Aman K.</small>
+    </div>
+    <div class="review-box">
+      <div class="stars">★★★★★</div>
+      <p>“Very easy to use. Just enter any number and get call details in seconds. Great app!”</p>
+      <small>- Riya S.</small>
+    </div>
+  </div>
+</section>
+
+
+  
 
   <footer class="footer">
     <h5>Call History of Any Number</h5>
